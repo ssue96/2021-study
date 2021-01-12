@@ -1,0 +1,14 @@
+{
+  "name": "darack_study",
+  "version": "0.0.0",
+  "description": "darack_study",
+  "main": "app.js",
+  "scripts": {
+    "start" : "node app.js"
+  },
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.17.1"
+  }
+}
