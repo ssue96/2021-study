@@ -1,0 +1,30 @@
+version: '3'
+services:
+  express:
+      container_name: server
+      image: "ssue96/darack-study:server"
+      ports:
+        - 5000:5000
+      networks:
+        - backend
+      
+  react:
+      container_name: client
+      image: "ssue96/darack-study:client"
+      ports:
+       - 3000:3000
+      networks:
+       - backend
+        
+  proxy:
+      container_name: proxy
+      image: "ssue96/darack-study:proxy"
+      ports:
+        - 8080:8080
+
+      networks:
+       - backend
+ 
+networks:
+  backend:
+    driver: bridge
