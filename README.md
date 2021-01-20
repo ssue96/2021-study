@@ -41,3 +41,27 @@ https://britny-no.tistory.com/27
 ### Nginx reverse proxy  
 https://www.thepolyglotdeveloper.com/2017/03/nginx-reverse-proxy-containerized-docker-applications/  
 https://medium.com/sjk5766/docker-compose%EB%A1%9C-localhost-nginx-%EB%A6%AC%EB%B2%84%EC%8A%A4-%ED%94%84%EB%A1%9D%EC%8B%9C-%EA%B5%AC%EC%84%B1-8214d41a94fc  
+
+
+## 3주차 과제  
+```
+1. 도커 네트워크를 구성  
+2. Client, Server, Proxy 컨테이너를 생성한 네트워크에서 실행  
+```
+
+```
+//bridge network 생성  
+$ docker network create --driver bridge study_network  
+
+// 생성 확인  
+$ docker network ls  
+
+//생성한 네트워크에서 컨테이너 실행(docker compose쓰면 자동으로 네트워크 만들어주는 듯)   
+$ docker run -p 5000:5000 --net=study_network --name server ssue96/darack-study:server
+$ docker run -p 3000:3000 --net=study_network --name clienty ssue96/darack-study:client
+$ docker run -p 8080:8080 --net=study_network --name proxy ssue96/darack-study:proxy
+```
+
+### Docker Network  
+https://dreamholic.tistory.com/95   
+https://hoony-gunputer.tistory.com/entry/docker-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC  
