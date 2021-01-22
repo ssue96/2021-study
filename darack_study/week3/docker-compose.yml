@@ -1,0 +1,30 @@
+version: '3'
+services:
+  express:
+      container_name: server2
+      image: "ssue96/darack-study:server2"
+      expose:
+        - 5000
+      networks:
+        - backend
+      
+  react:
+      container_name: client2
+      image: "ssue96/darack-study:client2"
+      expose:
+        - 3000
+      networks:
+       - backend
+        
+  proxy:
+      container_name: proxy2
+      image: "ssue96/darack-study:proxy2"
+      ports:
+        - 8080:8080
+
+      networks:
+       - backend
+ 
+networks:
+  backend:
+    driver: bridge
