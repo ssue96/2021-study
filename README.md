@@ -78,3 +78,7 @@ $ docker run -p 8080:8080 --net=study_network --name proxy ssue96/darack-study:p
 ### Docker Network  
 https://dreamholic.tistory.com/95   
 https://hoony-gunputer.tistory.com/entry/docker-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC  
+
+### 무료 도메인 구매  
+https://coyagi.tistory.com/entry/%EB%AC%B4%EB%A3%8C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%B0%9C%EA%B8%89-freenom  
+
