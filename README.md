@@ -55,6 +55,7 @@ https://liante0904.tistory.com/171
 * nginx.conf location 설정  
   react(/) express(/result) : X  
   react(/) express(/api/result) : base path 자체를 다르게 설정하여 location에서 express쪽을 /api 이렇게 설정해야함  
+* react post url 설정 - 베이스 url로 post 하므로 http://ip:port/path 가 아닌 /path만 입력하면 됨  
   
 ## 3주차 과제  
 ```
