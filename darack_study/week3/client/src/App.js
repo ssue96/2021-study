@@ -22,7 +22,7 @@ class App extends Component {
 		const fnum = this.state.fnum;
 		const snum = this.state.snum;
 		// axios
-		axios.post('http://52.78.181.224:8080/api/result',{fnum : fnum, snum : snum}).then((res) => {
+		axios.post('/api/result',{fnum : fnum, snum : snum}).then((res) => {
 			console.log(res.data);
 			console.log("result : " +res.data)
 			this.setState({

@@ -20,7 +20,7 @@ services:
       container_name: proxy2
       image: "ssue96/darack-study:proxy2"
       ports:
-        - 8080:8080
+        - 80:80
 
       networks:
        - backend
