@@ -42,7 +42,20 @@ https://britny-no.tistory.com/27
 https://www.thepolyglotdeveloper.com/2017/03/nginx-reverse-proxy-containerized-docker-applications/  
 https://medium.com/sjk5766/docker-compose%EB%A1%9C-localhost-nginx-%EB%A6%AC%EB%B2%84%EC%8A%A4-%ED%94%84%EB%A1%9D%EC%8B%9C-%EA%B5%AC%EC%84%B1-8214d41a94fc  
 
-
+### 주의  
+![image](https://user-images.githubusercontent.com/16449657/105454340-0d840280-5cc5-11eb-8ec3-9034769ac2b1.png)
+* nginx에서 express로 요청하는 것  (react → express X)  
+* cors(크로스도메인) 해결하는 방법  
+https://liante0904.tistory.com/171  
+  1. Express에서 설정 : **cors** middleware 사용해서 express에서 받을 때 처리  
+  https://firework-ham.tistory.com/70
+  2. React에서 설정 : **proxy** 설정(package.json proxy부분 설정 or http-proxy-middleware middleware사용)해서 react에서 보낼 때 주소 변경하여 처리  
+  https://hoons-up.tistory.com/m/26  
+  
+* nginx.conf location 설정  
+  react(/) express(/result) : X  
+  react(/) express(/api/result) : base path 자체를 다르게 설정하여 location에서 express쪽을 /api 이렇게 설정해야함  
+  
 ## 3주차 과제  
 ```
 1. 도커 네트워크를 구성  
@@ -65,3 +78,8 @@ $ docker run -p 8080:8080 --net=study_network --name proxy ssue96/darack-study:p
 ### Docker Network  
 https://dreamholic.tistory.com/95   
 https://hoony-gunputer.tistory.com/entry/docker-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC  
+
+### 무료 도메인 구매  
+https://my.freenom.com/  
+https://coyagi.tistory.com/entry/%EB%AC%B4%EB%A3%8C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%B0%9C%EA%B8%89-freenom  
+
