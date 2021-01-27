@@ -84,3 +84,33 @@ https://hoony-gunputer.tistory.com/entry/docker-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%8
 https://my.freenom.com/  
 https://coyagi.tistory.com/entry/%EB%AC%B4%EB%A3%8C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%B0%9C%EA%B8%89-freenom  
 
+## 4주차 과제  
+![test](https://user-images.githubusercontent.com/16449657/105993469-d01add00-60e9-11eb-9e2e-f0b11abde3ce.jpg)
+https://darack-hyesoo.ga/  
+```
+1. ALB 생성  
+2. 무료도메인 Route 53 등록  
+3. ACM SSL/TLS 인증서 발급  
+4. ALB로 http → https 리다이렉팅 설정  
+5. Nginx www → non-www 설정   
+  ex) https://www.darack-hyesoo.ga 접속 → https://darack-hyesoo.ga으로 리다이렉팅  
+```
+
+### ALB vs NLB 차이  
+* 로드밸런서 
+  - 서버 Health Check, SSL(HTTPS) 지원, HA(High Availability, 고가용성) 지원  
+  - 서비스간 라우팅, Health Check와 같은 서비스 간 통제 기능들이 애플리케이션에서 코드로 구현하는 것이 아닌 인프라 단에서 구현함으로서 각 서비스들을 관리하는데 훨씬 편리해지기 때문에 최근 유행하는 MSA(Micro Service Architecture)에서 LB는 필수  
+* ALB  
+  - (L7 계층)애플리케이션 계층에서 동작하는 로드밸런서
+  - 유동 IP  
+  -  SSL을 적용 가능  
+  - path-based(경로 기반) 라우팅 지원(Context 기반 라우팅)  
+* NLB  
+  - (L4 계층)네트워크 계층에서 동작
+  - 고정 IP 주소 지원
+  - SSL 적용이 인프라 단에서 불가능하여 애플리케이션에서 따로 적용  
+  - IP:Port 기반으로 라우팅   
+
+### ALB 외부 도메인 연동  
+https://tech.cloud.nongshim.co.kr/2018/10/16/%EC%B4%88%EB%B3%B4%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-aws-%EC%9B%B9%EA%B5%AC%EC%B6%95-8-%EB%AC%B4%EB%A3%8C-%EB%8F%84%EB%A9%94%EC%9D%B8%EC%9C%BC%EB%A1%9C-route-53-%EB%93%B1%EB%A1%9D-%EB%B0%8F-elb/  
+https://twofootdog.tistory.com/29  
