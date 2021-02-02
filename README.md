@@ -1,5 +1,7 @@
 # 2021-study
 나만 볼거야..  
+http://darack-hyesoo.ga/  
+
 ## 1주차 과제  
 ```  
 1. ec2에 도커 설치
@@ -132,6 +134,37 @@ https://m.blog.naver.com/PostView.nhn?blogId=rnjsrldnd123&logNo=221566841338&pro
 
 - redis docker  
 https://gompro.postype.com/post/1735800  
+
+*Parameters*  
+*URL* : http://darack-hyesoo.ga/  
+```
+curl -X POST /api/result
+```    
+*RequestBody*  
+```json
+{
+	"fnum" : "1",
+	"snum" : "2"
+}
+```
+*Response*  
+```json
+*Cached data*   
+{
+    "fnum": 1,
+    "snum": "2",
+    "state": Cached,
+    "result": "3"
+}
+*Not cached data*  
+{
+    "fnum": 1,
+    "snum": "2",
+    "state": Not cached,
+    "result": "3"
+}
+
+```  
 
 ### Redis vs Memcached  
 In-Memory Cache 비교
