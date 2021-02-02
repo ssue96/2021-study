@@ -187,5 +187,9 @@ https://deveric.tistory.com/65
 https://chrisjune-13837.medium.com/redis-vs-memcached-10e796ddd717  
 
 ### Jenkins(docker)설치 후 github 연동  
+```
+sudo docker pull jenkins/jenkins:lts  
+sudo docker run -p 47315:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts  
+```
 https://gintrie.tistory.com/7  
 https://waspro.tistory.com/447  
