@@ -114,3 +114,45 @@ https://darack-hyesoo.ga/
 ### ALB 외부 도메인 연동  
 https://tech.cloud.nongshim.co.kr/2018/10/16/%EC%B4%88%EB%B3%B4%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-aws-%EC%9B%B9%EA%B5%AC%EC%B6%95-8-%EB%AC%B4%EB%A3%8C-%EB%8F%84%EB%A9%94%EC%9D%B8%EC%9C%BC%EB%A1%9C-route-53-%EB%93%B1%EB%A1%9D-%EB%B0%8F-elb/  
 https://twofootdog.tistory.com/29  
+
+## 5주차 과제 
+![test (1)](https://user-images.githubusercontent.com/16449657/106598936-c129a400-659b-11eb-8df7-338b881b94fd.jpg)  
+```
+1. cloudwatch+lambda로 ec2 중지/기동 scheduling 
+2. Redis(docker)설치 후 API 서버 연동  
+3. Jenkins(docker)설치 후 github 연동  
+```
+
+### cloudwatch+lambda로 ec2 중지/기동 scheduling  
+https://aws.amazon.com/ko/premiumsupport/knowledge-center/start-stop-lambda-cloudwatch/  
+
+### Redis(docker)설치 후 API 서버 연동   
+- node ↔ redis 연동  
+https://m.blog.naver.com/PostView.nhn?blogId=rnjsrldnd123&logNo=221566841338&proxyReferer=https:%2F%2Fwww.google.com%2F  
+
+- redis docker  
+https://gompro.postype.com/post/1735800  
+
+### Redis vs Memcached  
+In-Memory Cache 비교
+* In-Memory computing
+  - 데이터를 하드디스크가 아닌 메인 메모리에서 수행 
+    연산을 위한 영역으로만 여겨졌던 메모리 영역을 대량의 데이터를 저장하여 처리할수 있는 공간으로 사용  
+  https://jaenjoy.tistory.com/20  
+* Cache - 연산된 값을 미리 저장(복사)해두는 임시 저장소  
+  데이터의 읽기(Read) 성능을 개선시키기 위해 DB와 같은 영구 저장소로부터 로드된 데이터를 빠르게 읽어올 수 있는 Memory 영역에 저장해두는 방식
+* Redis  
+  - 다양한 자료구조를 지원 
+  - 데이터 복구가 가능  
+  - 다양한 Data Eviction 정책을 지원  
+* Memcached  
+  - 멀티스레드를 아키텍처를 지원  
+  -  Redis에 비해 적은 메모리를 요구 
+  
+참고자료  
+https://deveric.tistory.com/65  
+https://chrisjune-13837.medium.com/redis-vs-memcached-10e796ddd717  
+
+### Jenkins(docker)설치 후 github 연동  
+https://gintrie.tistory.com/7  
+https://waspro.tistory.com/447  
