@@ -1,0 +1,42 @@
+version: '3'
+services:
+  express:
+      container_name: server5
+      image: "ssue96/darack-study:server5"
+      expose:
+        - 5000
+      networks:
+        - backend
+      
+  react:
+      container_name: client5
+      image: "ssue96/darack-study:client5"
+      expose:
+        - 3000
+      networks:
+       - backend
+        
+  proxy:
+      container_name: proxy5
+      image: "ssue96/darack-study:proxy5"
+      ports:
+        - 80:80
+      networks:
+       - backend
+       
+  redis:
+      container_name: redis
+      image: redis:6.0.5
+      command: redis-server --port 6379
+      hostname: redis
+      labels:
+        - "name=redis"
+        - "mode=standalone"
+      expose:
+        - 6379
+      networks:
+        - backend
+   
+networks:
+  backend:
+    driver: bridge
